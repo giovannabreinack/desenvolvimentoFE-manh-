@@ -46,14 +46,14 @@ body{
     height: auto;
     border-radius: 100%;
     transition: all 200ms ease-in-out;
-    filter: grayscale(0);
+    filter: grayscale(1);
 }
 
 .foto1:hover{
     cursor: crosshair;
     transform: scale(1.1);
     transition: all 200ms ease-in-out;
-    filter: grayscale(1);
+    filter: grayscale(0);
 }
 
 #s2{
@@ -78,6 +78,7 @@ body{
 nav{
     position: fixed !important;
     width: 100%;
+    z-index: 999 !important;
 }
 
 @media (width <= 1000px){
