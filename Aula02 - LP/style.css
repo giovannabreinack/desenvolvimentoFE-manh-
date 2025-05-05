@@ -80,6 +80,16 @@ body{
     padding-top: 10vh;
 }
 
+.card-body h5{
+    color: black;
+    font-weight: bold;
+}
+
+.card-body p{
+    color: black;
+    font-weight: 300;
+}
+
 .logo{
     width: 80px;
     height: auto;
