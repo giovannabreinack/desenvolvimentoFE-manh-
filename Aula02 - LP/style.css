@@ -45,8 +45,8 @@ body{
     width: 450px;
     height: auto;
     border-radius: 100%;
-    transition: all 200ms ease-in-out;
     filter: grayscale(1);
+    transition: all 200ms ease-in-out;
 }
 
 .foto1:hover{
