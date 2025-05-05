@@ -36,7 +36,6 @@
           </div>
         </div>
       </nav>
-</body>
 <main>
     <section id="s1">
         <div class="s1-left">
@@ -90,6 +89,14 @@
     </section>
     <section id="s3">
         <h2>Contato</h2>
+        <div class="formulario">
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" placeholder="Insira seu nome">
+          <label for="assunto">Mensagem</label>
+          <input id="assunto" type="text" placeholder="Insira o assunto">
+          <br>
+          <button class="btn" onclick="enviar()">Enviar</button>
+    </div>
     </section>
 </main>
 <footer>
@@ -98,4 +105,23 @@
   <a target="_blank" href=""><img src="./assets/icons/linkedin.png" alt="Linkedin Icon"></a>
   <a target="_blank" href=""><img src="./assets/icons/twitter.png" alt="X Icon"></a>
 </footer>
+<script>
+  function enviar(){
+    document.getElementById("nome").style.border = "2px solid #ffffff"
+    document.getElementById("assunto").style.border = "2px solid #ffffff"
+    const nome = document.getElementById("nome").value
+    const assunto = document.getElementById("assunto").value
+    
+    if(!nome || !assunto){
+      document.getElementById("nome").style.border = "3px solid red"
+      document.getElementById("assunto").style.border = "3px solid red"
+      return
+    }
+
+    const mensagem = `Gostaria de entrar em contato! \n\nNome: ${nome} \nAssunto: ${assunto}`
+    const msg = encodeURIComponent(mensagem)
+    window.open(`https://wa.me/5541999999999?text=${msg}`, '_blank')
+  }
+</script>
+</body>
 </html>
