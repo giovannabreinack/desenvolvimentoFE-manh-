@@ -20,11 +20,13 @@ function divisao(){
     if(numero02 !== 0){
         res.innerHTML = (numero01 / numero02).toFixed(2)
         res.style.color = "greenyellow"
-        es.style.fontSize = "32px"
+        res.style.fontSize = "32px"
+        document.getElementById("n6").style.border = "1px solid black"
     } else{
         res.innerHTML = "Não permite dividir por 0"
         res.style.color = "orange"
         res.style.fontSize = "16px"
+        document.getElementById("n6").style.border = "2px solid red"
     }
     
 }
