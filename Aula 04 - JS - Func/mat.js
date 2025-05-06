@@ -17,6 +17,11 @@ function divisao(){
     var numero02 = parseFloat(document.getElementById("n6").value)
     var res = document.getElementById("resultadoDivisao")
 
+    if(isNaN(numero01) || isNaN(numero02)){
+        res.textContent = "Digite algum número"
+        return
+    }
+
     if(numero02 !== 0){
         res.innerHTML = (numero01 / numero02).toFixed(2)
         res.style.color = "greenyellow"
